@@ -8,7 +8,7 @@ y = 512
 c = pygame.time.Clock()
 s = pygame.display.set_mode((x, y))
 p = pygame.Rect(512, 512-100, 50, 100)
-p_img = pygame.image.load(os.path.join("..","python","platformer","assets","mario.jpeg"))
+p_img = pygame.image.load(os.path.join("assets","mario.jpeg"))
 p_img = pygame.transform.scale(p_img, (50, 100))
 jump_vel = -15  # Jump velocity (negative for upward)
 gravity = 0.8   # Gravity acceleration
@@ -21,12 +21,12 @@ sponge_w=128
 sponge_h=256
 max_hp = 100
 current_hp = max_hp
-tile_img = pygame.image.load(os.path.join("..","python","platformer","assets","wall.jpeg"))
+tile_img = pygame.image.load(os.path.join("assets","wall.jpeg"))
 tile_img = pygame.transform.scale(tile_img, (tile_size, tile_size))
-spike_img = pygame.image.load(os.path.join("..","python","platformer","assets","spike.jpeg"))
+spike_img = pygame.image.load(os.path.join("assets","spike.jpeg"))
 spike_img = pygame.transform.scale(spike_img, (tile_size, tile_size))
 pygame.display.set_icon(p_img)
-boss_img = pygame.image.load(os.path.join("..","python","platformer","assets","sponge-boss.jpeg"))
+boss_img = pygame.image.load(os.path.join("assets","sponge-boss.jpeg"))
 boss_img = pygame.transform.scale(boss_img, (sponge_w, sponge_h))
 font = pygame.font.SysFont("Arial", 24)
 hp_bar = font.render(f"HP: {current_hp}/{max_hp}", True, (255, 0, 0))
@@ -210,3 +210,4 @@ while True:
     pygame.display.update()
 
     c.tick(60)
+
