@@ -208,4 +208,5 @@ while True:
         p.x = x - p.width
     draw()
     pygame.display.update()
+
     c.tick(60)
